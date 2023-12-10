@@ -3,9 +3,11 @@ import random  # For randomly selecting quotes
 import smtplib  # For sending emails using SMTP
 import getpass  # For securely inputting the email account password
 import time  # For measuring the execution time of the script
-from quotes import quotes_list
+from quotes import quotes_list  # For quotes from the list
+
 # Record the starting time of the program execution
 starting_time = time.time()
+
 
 def daily_reminder():
     # Possible mail service providers
@@ -45,18 +47,19 @@ def daily_reminder():
     # Generating the body of the email with random quotes
     for quotes in random.sample(quotes_list, k=5):
         body += f'{quotes}\n'
-    
+
     # Specifying the recipient's email address
     to_mail = input('Who do you want to send the message?: ')
-    
+
     # Constructing the email message
     message = f'Subject: {subject}\n{body}'
-    
+
     # Sending the email
     smtp_object.sendmail(mail_address, to_mail, message)
-    
+
     # Quitting the SMTP connection
     smtp_object.quit()
+
 
 # Executing the daily reminder function
 daily_reminder()
