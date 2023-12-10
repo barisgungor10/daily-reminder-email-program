@@ -10,6 +10,16 @@ This Python script allows you to send a daily reminder email containing positive
 4. Select a recipient's email address.
 5. The program will generate a daily reminder email with random positive quotes and send it.
 
+## Features
+
+- **Random Quote Selection:** Positive quotes are randomly chosen from a predefined list to keep the messages varied and uplifting.
+
+- **Email Integration:** Utilizes the SMTP protocol to send emails through popular service providers such as Gmail, Yahoo, Outlook, AT&T, and Comcast.
+
+- **User Authentication:** Securely logs in to the user's email account using the `getpass` module to input the application key without displaying it on the screen.
+
+- **Execution Time Tracking:** Calculates and displays the execution time, allowing users to monitor the performance of the program.
+
 ## Getting App-Specific Passwords
 
 ### Gmail:
@@ -47,6 +57,26 @@ For other email providers, check their security or account settings for options 
 - time library
 
 ## Usage
+
+1. **Run the script:**
+
+    ```bash
+    python daily_reminder.py
+    ```
+
+2. **Choose your preferred email service provider and provide the required information when prompted.**
+
+3. **Specify the recipient's email address for the daily reminder.**
+
+4. **The script will generate and send an email with a subject line "DAILY REMINDER" and a body containing five randomly selected positive quotes.**
+
+5. **The program execution time will be displayed upon completion.**
+
+# Configuration
+
+Ensure that your email provider allows SMTP connections. If you encounter issues, check your email provider's documentation for SMTP settings.
+
+# Example
 
 ```bash
 python daily_reminder.py
